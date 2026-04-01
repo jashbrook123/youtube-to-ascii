@@ -119,6 +119,7 @@ def surf_to_texture(surf):
 t = 0
     
 while True:
+
     img,wh,video = get_frame(video)
     
     display.fill((0,0,0))
@@ -136,6 +137,12 @@ while True:
             os.remove("video.mp4")
             os.remove("audio.wav")
             sys.exit()
+	if event.type == pygame.KEY_DOWN:
+	    if event.key = pygame.KEY_R:
+	        img_num = int(img_num) + fps*5
+	    if event.key = pygame.KEY_L:
+	        img_num = int(img_num) - fps*5
+
     frame_tex = surf_to_texture(display)
     frame_tex.use(0)
     atlas_tex.use(1)
